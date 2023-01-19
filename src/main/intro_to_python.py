@@ -1,8 +1,8 @@
 import numpy
-a = numpy.matrix([[1, 3, 3], [3, 1, 3], [3, 3, 1]])
+a = numpy.matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
 print(a)
 
-a = numpy.matrix([[1, 3, 3], [3, 1, 3], [3, 3, 1]])
+a[a == 0] = 3
 print("\n",a)
 
 a = numpy.delete(a, 2, 1)
