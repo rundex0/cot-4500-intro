@@ -1,9 +1,9 @@
 import numpy
-a = numpy.matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
-print(a)
+matrix = numpy.array(([1, 0, 0], [0, 1, 0], [0, 0, 1]))
+print(str(matrix).replace(' [', '').replace('[', '').replace(']', ''), "\n")
 
-a[a == 0] = 3
-print("\n",a)
+matrix[matrix < 1] = 3
+print(str(matrix).replace(' [', '').replace('[', '').replace(']', ''), "\n")
 
-a = numpy.delete(a, 2, 1)
-print("\n",a)
+matrix = numpy.delete(matrix, 0, 1)
+print(str(matrix).replace(' [', '').replace('[', '').replace(']', ''), "\n")
